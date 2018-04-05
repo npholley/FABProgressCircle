@@ -42,7 +42,7 @@ tools:context="com.github.jorgecastilloprz.fabprogresscircle.MainActivity">
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -124,6 +124,11 @@ tools:context="com.github.jorgecastilloprz.fabprogresscircle.MainActivity">
                     />
 
             </RelativeLayout>
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:id="@+id/scrollCheck"/>
 
         </LinearLayout>
 

@@ -111,6 +111,11 @@ public class FABProgressCircle extends FrameLayout implements ArcListener, Compl
         cycleArcView();
     }
 
+    public void hotSwapArcColor(int arcColor) {
+        this.arcColor = arcColor;
+        progressArc.setArcColor(arcColor);
+    }
+
     public void setFinalDrawable(int resource){
         this.completeIconDrawable = getContext().getResources().getDrawable(resource);
     }

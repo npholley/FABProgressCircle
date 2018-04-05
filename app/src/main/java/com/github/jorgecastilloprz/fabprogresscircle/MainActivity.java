@@ -49,6 +49,8 @@ public class MainActivity extends Activity implements MockActionCallback, FABPro
         if (!taskRunning) {
           fabProgressCircle.show();
           runMockInteractor();
+        } else {
+            fabProgressCircle.hotSwapArcColor(getResources().getColor(R.color.blue));
         }
       }
     });
