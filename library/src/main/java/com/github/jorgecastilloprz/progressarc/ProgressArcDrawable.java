@@ -305,4 +305,13 @@ final class ProgressArcDrawable extends Drawable implements Animatable {
   @Override public int getOpacity() {
     return PixelFormat.RGB_565;
   }
+
+    public int getArcColor() {
+        return arcColor;
+    }
+
+    public void setArcColor(int arcColor) {
+        this.arcColor = arcColor;
+        if (paint != null) paint.setColor(arcColor);
+    }
 }

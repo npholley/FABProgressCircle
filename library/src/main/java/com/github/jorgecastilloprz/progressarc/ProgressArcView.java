@@ -123,4 +123,17 @@ public final class ProgressArcView extends ProgressBar {
 
     return set;
   }
+
+    public int getArcColor() {
+        return arcColor;
+    }
+
+    public void setArcColor(int arcColor) {
+        this.arcColor = arcColor;
+        try {
+            ((ProgressArcDrawable) getIndeterminateDrawable()).setArcColor(arcColor);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
