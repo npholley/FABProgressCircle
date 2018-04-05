@@ -41,6 +41,9 @@ public class MainActivity extends Activity implements MockActionCallback, FABPro
   private void attachListeners() {
     fabProgressCircle.attachListener(this);
 
+    fabProgressCircle.setArcColor(getResources().getColor(R.color.green));
+    fabProgressCircle.setFinalDrawable(getResources().getDrawable(R.drawable.ic_archive_black_24dp));
+
     findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View view) {
         if (!taskRunning) {
