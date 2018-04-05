@@ -20,9 +20,9 @@ android {
 }
 
 dependencies {
-  compile parent.ext.libSupport
-  testCompile parent.ext.libRoboelectric
-  testCompile parent.ext.libMockito
+  implementation parent.ext.libSupport
+  testImplementation parent.ext.libRoboelectric
+  testImplementation parent.ext.libMockito
 }
 
 task checkstyle(type: Checkstyle) {
