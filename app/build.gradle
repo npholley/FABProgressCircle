@@ -34,12 +34,14 @@ android {
 }
 
 dependencies {
-  compile 'com.github.jorgecastilloprz:fabprogresscircle:1.01@aar'
-  compile parent.ext.libAppCompat
-  compile parent.ext.libSupportDesign
-  compile parent.ext.libPicasso
-  //  compile parent.ext.libFabMakovkastar
-  //  compile parent.ext.libFabFutureSimple
+    //implementation 'com.github.jorgecastilloprz:fabprogresscircle:1.01@aar'
+    implementation parent.ext.libAppCompat
+    implementation parent.ext.libSupport
+    implementation parent.ext.libSupportDesign
+    implementation parent.ext.libPicasso
+    //  compile parent.ext.libFabMakovkastar
+    //  compile parent.ext.libFabFutureSimple
+    implementation project(':library')
 }
 
 task checkstyle(type: Checkstyle) {
