@@ -83,6 +83,7 @@ public class FABProgressCircle extends FrameLayout implements ArcListener, Compl
     }
 
     private void setupInitialAttributes(AttributeSet attrs) {
+        setClipToPadding(false);
         if (attrs != null) {
             TypedArray attrArray = getAttributes(attrs);
             try {
@@ -94,6 +95,7 @@ public class FABProgressCircle extends FrameLayout implements ArcListener, Compl
                 circleSize = attrArray.getInt(R.styleable.FABProgressCircle_circleSize, 1);
                 roundedStroke = attrArray.getBoolean(R.styleable.FABProgressCircle_roundedStroke, false);
                 reusable = attrArray.getBoolean(R.styleable.FABProgressCircle_reusable, false);
+                setPadding(arcWidth, arcWidth, arcWidth, arcWidth);
             } finally {
                 attrArray.recycle();
             }
@@ -142,7 +144,8 @@ public class FABProgressCircle extends FrameLayout implements ArcListener, Compl
         progressArc = new ProgressArcView(getContext(), arcColor, arcWidth, roundedStroke);
         progressArc.setInternalListener(this);
         addView(progressArc,
-                new FrameLayout.LayoutParams(getFabDimension() + arcWidth, getFabDimension() + arcWidth,
+                new FrameLayout.LayoutParams(getFabDimension() + arcWidth,
+                        getFabDimension() + arcWidth,
                         Gravity.CENTER));
     }
 
