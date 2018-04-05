@@ -109,6 +109,14 @@ public class FABProgressCircle extends FrameLayout implements ArcListener, Compl
         cycleArcView();
     }
 
+    public void setFinalDrawable(int resource){
+        this.completeIconDrawable = getContext().getResources().getDrawable(resource);
+    }
+
+    public void setFinalDrawable(Drawable drawable){
+        this.completeIconDrawable = drawable;
+    }
+
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
